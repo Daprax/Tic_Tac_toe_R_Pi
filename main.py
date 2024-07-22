@@ -11,3 +11,12 @@ while (data == None):
         data = uart.read(10)
 
 print(data)
+
+log = open("log.txt", "a")
+
+log.write(data +";")
+log.close()
+
+log_ = open("log.txt", 'r')
+print(log_.read(100))
+
